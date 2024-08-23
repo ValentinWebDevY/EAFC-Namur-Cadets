@@ -1,0 +1,461 @@
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4.25rem;
+
+  background-color: $bg-main_color;
+  z-index: 100;
+  border-bottom: 2px solid $separation_color;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 1.25rem;
+
+  .logo {
+    width: 6.25rem;
+  }
+
+  .nav-menu {
+    position: fixed;
+    width: 100%;
+    height: 100dvh;
+    background-color: $bg_main_color;
+
+    top: 0;
+    left: -100%;
+    margin-top: 4.25rem;
+    padding: 2rem 1.25rem 0 1.25rem;
+    transition: left 0.5s ease-in-out;
+
+    .blob-container {
+      position: relative;
+      height: 100%;
+
+      .socials {
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          svg {
+            width: 1.25rem;
+            height: 1.25rem;
+            fill: #1A383F;
+            z-index: 1;
+          }
+        }
+
+        a:last-child {
+          border-right: 3px solid $font_color;
+          padding-right: 1rem;
+        }
+
+        form {
+          border-left: 2px solid $font_color;
+          padding-left: 1rem;
+          color: $font_color;
+        }
+      }
+
+      ul {
+
+        li {
+          .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border-bottom: 2px solid $separation_color;
+            padding: 1rem 0;
+
+            img, svg {
+              width: 1.875rem;
+            }
+          }
+        }
+      }
+
+      .burger-red-blob{
+        @include mX-absolute-position(auto, auto, 20%, auto);
+        width: 7.813rem;
+      }
+
+      .burger-yellow-blob {
+        width: 11rem;
+        @include mX-absolute-position(auto, 0, 30%, auto);
+      }
+    }
+  }
+
+  .nav-menu.active {
+    left: 0;
+    top: 0;
+  }
+
+  .right-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    a {
+      @include mX-button($padding: .5rem 1rem, $border_rad: 5px);
+    }
+  }
+
+  /* burger menu */
+  .line-hamburger {
+    display: flex;
+    flex-direction: column;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+
+    border-radius: 8px;
+    background-color: #101010;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hamburger.active .line-hamburger:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .line-hamburger:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .line-hamburger:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+/* ====== FOOTER SECTION ====== */
+.top-footer {
+  margin: 0 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .footer-partenaires {
+    margin-bottom: 3rem;
+
+    .partenaires {
+      display: flex;
+      justify-content: space-around;
+
+      img {
+        max-width: 6.25rem;
+        object-fit: contain;
+      }
+    }
+  }
+
+  address {
+
+    a {
+      border-bottom: 1px solid $blue;
+    }
+  }
+
+  .footer-nav {
+
+    li {
+      padding: .5rem 0;
+    }
+  }
+
+  .footer-plat-online {
+
+    .plat-online {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+  }
+}
+
+.separation {
+  width: 100%;
+  height: 2px;
+  background-color: $separation_color;
+  margin: 3rem 0;
+}
+.bottom-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1.25rem 2rem 1.25rem;
+
+  .logo {
+    width: 6.25rem;
+  }
+
+  .footer-socials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+
+    svg {
+      width: 2.188rem;
+      height: 2.188rem;
+      fill: #1A383F;
+
+    }
+  }
+
+  p {
+    color: $blue;
+  }
+}
+/* ====== END FOOTER SECTION ====== */
+
+
+/* ====== RESPONSIVE TABLET ====== */
+/* footer */
+@include mX-screen("tablet") {
+  .top-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "partenaires partenaires"
+    "contact nav"
+    "plat-online plat-online";
+    justify-content: center;
+
+    margin: 0 4rem;
+
+    .footer-partenaires {
+      grid-area: partenaires;
+    }
+
+    .footer-contact {
+      grid-area: contact;
+    }
+
+    .footer-nav {
+      grid-area: nav;
+    }
+
+    .footer-plat-online {
+      grid-area: plat-online;
+
+      .plat-online {
+        display: flex;
+        gap: 3rem;
+
+        a {
+          width: fit-content;
+        }
+      }
+    }
+  }
+
+  .bottom-footer {
+    margin: 0 4rem;
+  }
+}
+/* end footer */
+/* ====== END RESPONSIVE TABLET ====== */
+
+
+/* ====== RESPONSIVE PC ====== */
+@include mX-screen("pc") {
+
+  /* navbar */
+
+  .navbar {
+    position: static;
+
+    // get away from my socials
+    margin-top: 4rem;
+    padding: 0;
+    @include mX-padding-settings;
+
+    .logo {
+      min-width: 6.25rem;
+    }
+
+    .nav-menu {
+      position: static;
+      height: auto;
+
+      // reset
+      margin-top: 0;
+      padding: 0;
+
+      .blob-container {
+        position: static;
+
+        .socials {
+          // go on top of the screen
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+
+          background-color: $bg_main_color;
+          border-bottom: 1px solid $separation_color;
+
+          a {
+            padding: 1rem 0;
+            svg {
+              width: 1.5rem;
+              height: 1.5rem;
+              fill: #1A383F;
+              z-index: 1;
+              border-radius: 50%;
+            }
+
+            svg:hover {
+              background-color: $white;
+              outline: 10px solid $white;
+              fill: $lighter_blue;
+
+              // for instagram svg
+              path {
+                fill: $lighter_blue;
+              }
+            }
+          }
+
+          a:first-child {
+            margin-left: 6.25rem;
+          }
+
+          // form on the right of the screen without adding a new div
+          form {
+            //reset
+            border-left: none;
+
+            margin-left: auto;
+            padding-right: 6.25rem;
+
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            svg {
+              display: block;
+              min-width: 1.5rem;
+            }
+          }
+        }
+
+        ul {
+          display: flex;
+          justify-content: center;
+          gap: 2rem;
+          height: auto;
+
+          li {
+
+            .nav-link {
+              border-bottom: none;
+              padding: 0 .5rem;
+              //avoid bounce effect
+              border-bottom: 2px solid transparent;
+
+              &:hover {
+                color: $lighter_blue;
+                border-bottom: 2px solid $lighter_blue;
+              }
+            }
+
+            svg, img {
+              display: none;
+            }
+          }
+        }
+      }
+
+      .burger-red-blob, .burger-yellow-blob {
+        display: none;
+      }
+    }
+
+    .right-header {
+      .hamburger {
+        display: none;
+      }
+    }
+  }
+  /* end navbar */
+
+  /* footer */
+  .top-footer {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+    "partenaires nav contact plat-online";
+
+    margin: 0;
+    @include mX-padding-settings;
+
+    .footer-partenaires {
+      .partenaires {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 2rem;
+      }
+    }
+
+    .footer-nav {
+      li {
+        a {
+          border-bottom: 2px solid transparent;
+
+          &:hover {
+            color: $lighter_blue;
+            border-bottom: 2px solid $lighter_blue;
+          }
+        }
+      }
+    }
+
+    .footer-plat-online {
+      justify-self: center;
+
+      .plat-online {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  .bottom-footer {
+    margin: 0;
+    @include mX-padding-settings;
+    padding-bottom: 2rem;
+
+    .logo {
+      min-width: 6.25rem;
+    }
+
+    .footer-socials {
+      gap: 1rem;
+
+      a {
+
+        svg {
+          border-radius: 50%;
+
+          &:hover {
+            background-color: $white;
+            outline: 10px solid $white;
+            fill: $lighter_blue;
+
+            // for instagram svg
+            path {
+              fill: $lighter_blue;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* end footer */
+}
+/* ====== END RESPONSIVE PC ====== */

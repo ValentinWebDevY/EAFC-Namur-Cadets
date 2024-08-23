@@ -1,0 +1,243 @@
+:root {
+  box-sizing: border-box;
+  font-size: 1rem;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.25rem;
+  @include mX-section-color();
+  overflow-x: hidden;
+}
+
+// changer la couleur surlignage
+*::selection {
+  background-color: $lighter_blue;
+  color: $white;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hide_content {
+  display: none;
+}
+
+.heading1 {
+  @include mX-font(2.25rem, 700);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.heading2 {
+  @include mX-font(1.5rem, 600, $blue);
+  padding-bottom: .5rem;
+}
+
+.heading3 {
+  @include mX-font(1.25rem, 600);
+}
+
+.heading4 {
+  @include mX-font(1.125rem, 600);
+}
+
+.footer-heading {
+  @include mX-font($weight: 600, $color: $blue);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+// overflow-x hidden for AOS
+section {
+  padding: 3rem 0;
+  overflow-y: hidden;
+}
+
+.burger-nav {
+  @include mX-font(1.25rem, 600);
+  text-transform: uppercase;
+}
+
+.button-text {
+  @include mX-font($weight: 600);
+}
+
+.rounded-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: fit-content;
+  gap: 1.25rem;
+}
+
+.top-right {
+  grid-template-areas:
+    "red yellow"
+    "empty blue";
+
+  div {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+
+  .red {
+    grid-area: red;
+    @include mX-round-div($red);
+  }
+
+  .yellow {
+    grid-area: yellow;
+    @include mX-round-div($yellow);
+  }
+
+  .blue {
+    grid-area: blue;
+    @include mX-round-div($blue);
+  }
+}
+
+.top-left {
+  grid-template-areas:
+    "yellow blue"
+    "red empty";
+
+  div {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+
+  .red {
+    grid-area: red;
+    @include mX-round-div($red);
+  }
+
+  .yellow {
+    grid-area: yellow;
+    @include mX-round-div($yellow);
+  }
+
+  .blue {
+    grid-area: blue;
+    @include mX-round-div($blue);
+  }
+}
+
+.bottom-left {
+  grid-template-areas:
+    "red empty"
+    "yellow blue";
+
+  div {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+
+  .red {
+    grid-area: red;
+    @include mX-round-div($red);
+  }
+
+  .yellow {
+    grid-area: yellow;
+    @include mX-round-div($yellow);
+  }
+
+  .blue {
+    grid-area: blue;
+    @include mX-round-div($blue);
+  }
+}
+
+.bottom-right {
+  grid-template-areas:
+    "empty blue"
+    "red yellow";
+
+  div {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+
+  .red {
+    grid-area: red;
+    @include mX-round-div($red);
+  }
+
+  .yellow {
+    grid-area: yellow;
+    @include mX-round-div($yellow);
+  }
+
+  .blue {
+    grid-area: blue;
+    @include mX-round-div($blue);
+  }
+}
+
+address {
+  font-style: normal;
+  margin-bottom: 1rem;
+}
+
+.to-the-top {
+  opacity: 80%;
+  border: 3px solid #1A383F;
+  border-radius: 50%;
+  background-color: white;
+  transition: 1s;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99999;
+}
+
+.blob-size {
+  width: 9.375rem;
+}
+
+.blob-blue-size {
+  width: 6.25rem;
+}
+
+/* responsive pc settings */
+@include mX-screen("pc") {
+
+  .burger-nav {
+    font-weight: normal;
+  }
+
+  .heading1 {
+    font-size: 3rem;
+  }
+
+  .heading2 {
+    font-size: 2rem;
+  }
+
+  .heading3 {
+    font-size: 1.5rem;
+  }
+
+  .heading4 {
+    font-size: 1.25rem;
+  }
+
+  p, a {
+    font-size: 1.125rem;
+  }
+
+  .blob-size {
+    width: 11rem;
+  }
+
+  .blob-blue-size {
+    width: 8rem;
+  }
+
+  .blob-yellow-size {
+    width: 13rem;
+  }
+}

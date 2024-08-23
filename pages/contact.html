@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css">
+    <link rel="icon" type="image/x-icon" href="../assets/logo/favicon-96x96.png">
+
+    <!--  flowbite  -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <!--  AOS  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>EAFC NAMUR-CADETS - Enseignement pour Adultes et de Formation Continue</title>
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <a href="../index.html">
+            <img class="logo" src="../assets/logo/logo-v1.png" alt="Logo EAFC Namur-Cadets">
+        </a>
+        <div class="nav-menu">
+            <div class="blob-container">
+                <div class="socials">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24">
+                            <path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h8.615v-6.96h-2.338v-2.725h2.338v-2c0-2.325 1.42-3.592 3.5-3.592c.699-.002 1.399.034 2.095.107v2.42h-1.435c-1.128 0-1.348.538-1.348 1.325v1.735h2.697l-.35 2.725h-2.348V21H20a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24">
+                            <path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248a4.623 4.623 0 0 0 0-9.248m0 7.627a3.004 3.004 0 1 1 0-6.008a3.004 3.004 0 0 1 0 6.008"/>
+                            <circle cx="16.806" cy="7.207" r="1.078" fill="#1A383F"/>
+                            <path fill="#1A383F"
+                                  d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42a4.6 4.6 0 0 0-2.633 2.632a6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71c0 2.442 0 2.753.056 3.71c.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632a6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419a4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186c.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217m-1.218 9.532a5.043 5.043 0 0 1-.311 1.688a2.987 2.987 0 0 1-1.712 1.711a4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055c-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311a2.985 2.985 0 0 1-1.719-1.711a5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654c0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311a2.991 2.991 0 0 1 1.712 1.712a5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655c0 2.436 0 2.698-.043 3.654z"/>
+                        </svg>
+                    </a>
+                    <a href="https://fr.linkedin.com" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1M8.339 18.337H5.667v-8.59h2.672zM7.003 8.574a1.548 1.548 0 1 1 0-3.096a1.548 1.548 0 0 1 0 3.096m11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277c-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387c2.704 0 3.203 1.778 3.203 4.092v4.71z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M21.593 7.203a2.506 2.506 0 0 0-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 0 0-1.766 1.778c-.413 1.566-.417 4.814-.417 4.814s-.004 3.264.406 4.814c.23.857.905 1.534 1.763 1.765c1.582.43 7.83.437 7.83.437s6.265.007 7.831-.403a2.515 2.515 0 0 0 1.767-1.763c.414-1.565.417-4.812.417-4.812s.02-3.265-.407-4.831M9.996 15.005l.005-6l5.207 3.005z"/>
+                        </svg>
+                    </a>
+                    <form>
+                        <svg class="hide_content"
+                             xmlns="http://www.w3.org/2000/svg"
+                             width="1.5rem"
+                             height="1.5rem"
+                             viewBox="0 0 24 24">
+                            <path
+                                    fill="#1A383F"
+                                    d="M12 22q-2.05 0-3.875-.788t-3.187-2.15t-2.15-3.187T2 12q0-2.075.788-3.887t2.15-3.175t3.187-2.15T12 2q2.075 0 3.888.788t3.174 2.15t2.15 3.175T22 12q0 2.05-.788 3.875t-2.15 3.188t-3.175 2.15T12 22m0-2.05q.65-.9 1.125-1.875T13.9 16h-3.8q.3 1.1.775 2.075T12 19.95m-2.6-.4q-.45-.825-.787-1.713T8.05 16H5.1q.725 1.25 1.813 2.175T9.4 19.55m5.2 0q1.4-.45 2.488-1.375T18.9 16h-2.95q-.225.95-.562 1.838T14.6 19.55M4.25 14h3.4q-.075-.5-.112-.987T7.5 12t.038-1.012T7.65 10h-3.4q-.125.5-.187.988T4 12t.063 1.013t.187.987m5.4 0h4.7q.075-.5.113-.987T14.5 12t-.038-1.012T14.35 10h-4.7q-.075.5-.112.988T9.5 12t.038 1.013t.112.987m6.7 0h3.4q.125-.5.188-.987T20 12t-.062-1.012T19.75 10h-3.4q.075.5.113.988T16.5 12t-.038 1.013t-.112.987m-.4-6h2.95q-.725-1.25-1.812-2.175T14.6 4.45q.45.825.788 1.713T15.95 8M10.1 8h3.8q-.3-1.1-.775-2.075T12 4.05q-.65.9-1.125 1.875T10.1 8m-5 0h2.95q.225-.95.563-1.838T9.4 4.45Q8 4.9 6.912 5.825T5.1 8"/>
+                        </svg>
+                        <label for="underline_select" class="sr-only"></label>
+                        <select id="underline_select"
+                                class="block py-2.5 px-0 w-full bg-transparent border-0 appearance-none focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+                            <option value="fr" data-textkey="fr_lang">Français</option>
+                            <option value="en" data-textkey="en_lang">English</option>
+                        </select>
+                    </form>
+                </div>
+                <ul>
+                    <li>
+                        <a href="../index.html" class="nav-link burger-nav">
+                            <img src="../assets/icon/navbar/accueil.svg" alt="icone accueil">
+                            <span class="trad" data-textkey="navbar_home"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../pages/infos.html" class="nav-link burger-nav">
+                            <img src="../assets/icon/navbar/infos.svg" alt="icone infos">
+                            <span class="trad" data-textkey="navbar_infos"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="formations.html" class="nav-link burger-nav">
+                            <img src="../assets/icon/navbar/formations.svg" alt="icone formations">
+                            <span class="trad" data-textkey="navbar_formations"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="actualites.html" class="nav-link burger-nav">
+                            <img src="../assets/icon/navbar/actualite.svg" alt="icone actus">
+                            <span class="trad" data-textkey="navbar_actus"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../pages/contact.html" class="nav-link burger-nav">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path fill="#1A383F"
+                                      d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zM20 8l-7.475 4.675q-.125.075-.262.113t-.263.037t-.262-.037t-.263-.113L4 8v10h16zm-8 3l8-5H4zM4 8v.25v-1.475v.025V6v.8v-.012V8.25zv10z"/>
+                            </svg>
+                            contact
+                        </a>
+                    </li>
+                </ul>
+                <img class="burger-red-blob" src="../assets/blob/type1-red.png" alt="blob rouge">
+                <img class="burger-yellow-blob" src="../assets/blob/type-2-yellow.png" alt="blob jaune">
+            </div>
+        </div>
+        <div class="right-header">
+            <a href="../pages/infos.html" class="trad" data-textkey="inscriptions_btn">Inscription</a>
+            <div class="hamburger">
+                <span class="line-hamburger"></span>
+                <span class="line-hamburger"></span>
+                <span class="line-hamburger"></span>
+            </div>
+        </div>
+    </nav>
+</header>
+<main id="contact-page">
+    <h1 class="heading1 trad" data-textkey="contact_title"></h1>
+    <div class="contact-blob-container">
+        <img data-aos="fade-up-left" data-aos-duration="1000" class="blob-size blob-red" src="../assets/blob/type1-red.png" alt="Blob rouge">
+        <div class="infos-inscriptions">
+            <div data-aos="fade-down-right" data-aos-duration="1000" class="rounded-container top-left">
+                <div class="red"></div>
+                <div class="yellow"></div>
+                <div class="blue"></div>
+                <div class="empty"></div>
+            </div>
+            <h2 class="heading2 trad" data-textkey="contact_subtitle_1"></h2>
+            <div class="person">
+                <img src="../assets/contact/avatar.jpg" alt="Secrétariat de l'EAFC Namur-cadets">
+                <div class="content">
+                    <h3 class="heading4 trad" data-textkey="contact_card_title_1"></h3>
+                    <div class="contact-link">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="1.5rem"
+                                height="1.5rem"
+                                viewBox="0 0 24 24"
+                        >
+                            <path
+                                    fill="#1A383F"
+                                    d="M19.95 21q-3.125 0-6.175-1.362t-5.55-3.863t-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3"
+                            />
+                        </svg>
+                        <p>081/22.29.03</p>
+                    </div>
+                    <div class="contact-link">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="1.5rem"
+                                height="1.5rem"
+                                viewBox="0 0 24 24"
+                        >
+                            <path
+                                    fill="#1A383F"
+                                    d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7L4 8v10h16V8zm0-2l8-5H4zM4 8V6v12z"
+                            />
+                        </svg>
+                        <a href="mailto:info@namur-cadets.be">info@namur-cadets.be</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="direction">
+            <h2 class="heading2 trad" data-textkey="contact_subtitle_2"></h2>
+            <div class="persons">
+                <div class="person">
+                    <img src="../assets/contact/avatar.jpg" alt="Secrétariat de l'EAFC Namur-cadets">
+                    <div class="content">
+                        <h3 class="heading4 trad" data-textkey="contact_card_title_2"></h3>
+                        <p>Christophe Lochy</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <img src="../assets/contact/avatar.jpg" alt="Secrétariat de l'EAFC Namur-cadets">
+                    <div class="content">
+                        <h3 class="heading4 trad" data-textkey="contact_card_title_3"></h3>
+                        <p>Charlotte Coerten</p>
+                        <div class="contact-link">
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="1.5rem"
+                                    height="1.5rem"
+                                    viewBox="0 0 24 24"
+                            >
+                                <path
+                                        fill="#1A383F"
+                                        d="M19.95 21q-3.125 0-6.175-1.362t-5.55-3.863t-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3"
+                                />
+                            </svg>
+                            <p>081/22.29.03</p>
+                        </div>
+                        <div class="contact-link">
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="1.5rem"
+                                    height="1.5rem"
+                                    viewBox="0 0 24 24"
+                            >
+                                <path
+                                        fill="#1A383F"
+                                        d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7L4 8v10h16V8zm0-2l8-5H4zM4 8V6v12z"
+                                />
+                            </svg>
+                            <a href="mailto:info@namur-cadets.be">info@namur-cadets.be</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="person">
+                    <img src="../assets/contact/avatar.jpg" alt="Secrétariat de l'EAFC Namur-cadets">
+                    <div class="content">
+                        <h3 class="heading4 trad" data-textkey="contact_card_title_4"></h3>
+                        <p>Béatrice Delhalle</p>
+                        <div class="contact-link">
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="1.5rem"
+                                    height="1.5rem"
+                                    viewBox="0 0 24 24"
+                            >
+                                <path
+                                        fill="#1A383F"
+                                        d="M19.95 21q-3.125 0-6.175-1.362t-5.55-3.863t-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3"
+                                />
+                            </svg>
+                            <p>081/22.29.03</p>
+                        </div>
+                        <div class="contact-link">
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="1.5rem"
+                                    height="1.5rem"
+                                    viewBox="0 0 24 24"
+                            >
+                                <path
+                                        fill="#1A383F"
+                                        d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7L4 8v10h16V8zm0-2l8-5H4zM4 8V6v12z"
+                                />
+                            </svg>
+                            <a href="mailto:info@namur-cadets.be">info@namur-cadets.be</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="person">
+                    <img src="../assets/contact/avatar.jpg" alt="Secrétariat de l'EAFC Namur-cadets">
+                    <div class="content">
+                        <h3 class="heading4 trad" data-textkey="contact_card_title_5"></h3>
+                        <p>Sébastien Mahieu</p>
+                        <div class="contact-link">
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="1.5rem"
+                                    height="1.5rem"
+                                    viewBox="0 0 24 24"
+                            >
+                                <path
+                                        fill="#1A383F"
+                                        d="M19.95 21q-3.125 0-6.175-1.362t-5.55-3.863t-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3"
+                                />
+                            </svg>
+                            <p>081/22.29.03</p>
+                        </div>
+                        <div class="contact-link">
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="1.5rem"
+                                    height="1.5rem"
+                                    viewBox="0 0 24 24"
+                            >
+                                <path
+                                        fill="#1A383F"
+                                        d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7L4 8v10h16V8zm0-2l8-5H4zM4 8V6v12z"
+                                />
+                            </svg>
+                            <a href="mailto:info@namur-cadets.be">info@namur-cadets.be</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="person">
+                    <img src="../assets/contact/avatar.jpg" alt="Secrétariat de l'EAFC Namur-cadets">
+                    <div class="content">
+                        <h3 class="heading4 trad" data-textkey="contact_card_title_6"></h3>
+                        <p>Carole Dumont</p>
+                        <div class="contact-link">
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="1.5rem"
+                                    height="1.5rem"
+                                    viewBox="0 0 24 24"
+                            >
+                                <path
+                                        fill="#1A383F"
+                                        d="M19.95 21q-3.125 0-6.175-1.362t-5.55-3.863t-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3"
+                                />
+                            </svg>
+                            <p>081/22.29.03</p>
+                        </div>
+                        <div class="contact-link">
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="1.5rem"
+                                    height="1.5rem"
+                                    viewBox="0 0 24 24"
+                            >
+                                <path
+                                        fill="#1A383F"
+                                        d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7L4 8v10h16V8zm0-2l8-5H4zM4 8V6v12z"
+                                />
+                            </svg>
+                            <a href="mailto:info@namur-cadets.be">info@namur-cadets.be</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img data-aos="fade-up-left" data-aos-duration="1000" src="../assets/blob/type-2-yellow.png" alt="Blob jaune" class="blob-size blob-yellow">
+        <div class="infos-technique">
+            <h2 class="heading2 trad" data-textkey="contact_subtitle_3"></h2>
+            <div class="person">
+                <img src="../assets/contact/avatar.jpg" alt="Secrétariat de l'EAFC Namur-cadets">
+                <div class="content">
+                    <h3 class="heading4 trad" data-textkey="contact_card_title_7"></h3>
+                    <p>Evelyne Polain</p>
+                    <div class="contact-link">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="1.5rem"
+                                height="1.5rem"
+                                viewBox="0 0 24 24"
+                        >
+                            <path
+                                    fill="#1A383F"
+                                    d="M19.95 21q-3.125 0-6.175-1.362t-5.55-3.863t-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3"
+                            />
+                        </svg>
+                        <p>081/22.29.03</p>
+                    </div>
+                    <div class="contact-link">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="1.5rem"
+                                height="1.5rem"
+                                viewBox="0 0 24 24"
+                        >
+                            <path
+                                    fill="#1A383F"
+                                    d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7L4 8v10h16V8zm0-2l8-5H4zM4 8V6v12z"
+                            />
+                        </svg>
+                        <a href="mailto:info@namur-cadets.be">info@namur-cadets.be</a>
+                    </div>
+                </div>
+            </div>
+            <div class="person">
+                <img src="../assets/contact/avatar.jpg" alt="Secrétariat de l'EAFC Namur-cadets">
+                <div class="content">
+                    <h3 class="heading4 trad" data-textkey="contact_card_title_8"></h3>
+                    <p>Karl Duquenne</p>
+                    <div class="contact-link">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="1.5rem"
+                                height="1.5rem"
+                                viewBox="0 0 24 24"
+                        >
+                            <path
+                                    fill="#1A383F"
+                                    d="M19.95 21q-3.125 0-6.175-1.362t-5.55-3.863t-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3"
+                            />
+                        </svg>
+                        <p>081/22.29.03</p>
+                    </div>
+                    <div class="contact-link">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="1.5rem"
+                                height="1.5rem"
+                                viewBox="0 0 24 24"
+                        >
+                            <path
+                                    fill="#1A383F"
+                                    d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7L4 8v10h16V8zm0-2l8-5H4zM4 8V6v12z"
+                            />
+                        </svg>
+                        <a href="mailto:info@namur-cadets.be">info@namur-cadets.be</a>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up-right" data-aos-duration="1000" class="rounded-container bottom-left">
+                <div class="red"></div>
+                <div class="yellow"></div>
+                <div class="blue"></div>
+                <div class="empty"></div>
+            </div>
+        </div>
+    </div>
+    <section id="map">
+        <h2 class="heading2 trad" data-textkey="contact_subtitle_4"></h2>
+        <div class="map-section-content">
+            <div data-aos="fade-up" data-aos-delay="100" class="sub-info">
+                <div class="pin">
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="1.5rem"
+                            height="1.5rem"
+                            viewBox="0 0 24 24">
+                        <path
+                                fill="#0D3273"
+                                d="M12 19q-3.525-2.6-5.262-5.05T5 9.15q0-1.775.638-3.113T7.275 3.8t2.25-1.35T12 2t2.475.45t2.25 1.35t1.638 2.238T19 9.15q0 2.35-1.737 4.8T12 19m0-8q.825 0 1.413-.587T14 9t-.587-1.412T12 7t-1.412.588T10 9t.588 1.413T12 11M5 22v-2h14v2z"
+                        />
+                    </svg>
+                </div>
+                <div class="content">
+                    <p class="trad" data-textkey="contact_map_title_1"></p>
+                    <address>
+                        EAFC Namur Cadets <br>
+                        Place de l'École des Cadets,6 <br>
+                        5000 NAMUR
+                    </address>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="400" class="sub-info">
+                <div class="pin">
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="1.5rem"
+                            height="1.5rem"
+                            viewBox="0 0 24 24"
+                    >
+                        <path
+                                fill="#0D3273"
+                                d="M9 10v2H7v-2zm4 0v2h-2v-2zm4 0v2h-2v-2zm2-7a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h1V1h2v2h8V1h2v2zm0 16V8H5v11zM9 14v2H7v-2zm4 0v2h-2v-2zm4 0v2h-2v-2z"
+                        />
+                    </svg>
+                </div>
+                <div class="content">
+                    <p class="trad" data-textkey="contact_map_title_2"></p>
+                    <address class="trad" data-textkey="footer_address">
+                    </address>
+                </div>
+            </div>
+            <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5079.34652501235!2d4.874983912035236!3d50.46580877147659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c19911762f411d%3A0x3730fdb0385bc55e!2sEAFC%20NAMUR-CADETS!5e0!3m2!1sfr!2sbe!4v1714828839818!5m2!1sfr!2sbe"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+
+            </iframe>
+        </div>
+    </section>
+    <a id="to-the-top-btn" class="to-the-top hide_content" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" viewBox="0 0 24 24"><path fill="#1A383F" d="M13 20h-2V8l-5.5 5.5l-1.42-1.42L12 4.16l7.92 7.92l-1.42 1.42L13 8z"/></svg>
+    </a>
+</main>
+<footer>
+    <div class="top-footer">
+        <div class="footer-partenaires">
+            <p class="footer-heading trad" data-textkey="footer_partenaires"></p>
+            <div class="partenaires">
+                <a href="https://www.wbe.be" target="_blank">
+                    <img src="../assets/partenaires/WBE_logos_vertical.png" alt="Logo Wallonie Bruxelles Enseignement">
+                </a>
+                <a href="https://fse.be" target="_blank">
+                    <img src="../assets/partenaires/LE_DRAPEAU_EUROPEEN__PROJETS_FSE_HORS_IEJ_.jpg" alt="Logo Union Européenne">
+                </a>
+                <a href="https://www.poledenamur.be" target="_blank">
+                    <img src="../assets/partenaires/poleEmploiNamur.png" alt="Logo Pôle Emploi Namur">
+                </a>
+            </div>
+        </div>
+        <div class="footer-contact">
+            <p class="footer-heading">Contact</p>
+            <address>
+                EAFC Namur Cadets <br>
+                Place de l'École des Cadets,6 <br>
+                5000 NAMUR
+            </address>
+            <address>
+                Tél : 081/22.29.03 <br>
+                Email : <a href="mailto:info@namur-cadets.be">info@namur-cadets.be</a>
+            </address>
+            <address class="trad" data-textkey="footer_address">
+            </address>
+        </div>
+        <div class="footer-nav">
+            <p class="footer-heading trad" data-textkey="footer_nav"></p>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../index.html" class="trad" data-textkey="navbar_home"></a>
+                    </li>
+                    <li>
+                        <a href="../pages/infos.html" class="trad" data-textkey="navbar_infos"></a>
+                    </li>
+                    <li>
+                        <a href="../pages/formations.html" class="trad" data-textkey="navbar_formations"></a>
+                    </li>
+                    <li>
+                        <a href="../pages/actualites.html" class="trad" data-textkey="navbar_actus"></a>
+                    </li>
+                    <li>
+                        <a href="../pages/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-plat-online">
+            <p class="footer-heading trad" data-textkey="footer_online"></p>
+            <div class="plat-online">
+                <a href="https://namur-cadets.smartschool.be/login" target="_blank"><img src="../assets/icon/socials/smartschool.svg" alt="Plateforme Smartschool de l'EAFC Namur">
+                </a>
+                <a href="https://moodle.iepscf-namur.be" target="_blank">
+                    <img src="../assets/icon/socials/moodle.svg" alt="Plateforme Moodle de l'EAFC Namur">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="separation"></div>
+    <div class="bottom-footer">
+        <a href="index.html">
+            <img class="logo" src="../assets/logo/logo-v1.png" alt="Logo EAFC Namur-Cadets">
+        </a>
+        <p class="heading4">&copy; EAFC NAMUR-CADETS</p>
+        <div class="footer-socials">
+            <a href="https://www.facebook.com" target="_blank">
+                <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24">
+                    <path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h8.615v-6.96h-2.338v-2.725h2.338v-2c0-2.325 1.42-3.592 3.5-3.592c.699-.002 1.399.034 2.095.107v2.42h-1.435c-1.128 0-1.348.538-1.348 1.325v1.735h2.697l-.35 2.725h-2.348V21H20a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1"/>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24">
+                    <path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248a4.623 4.623 0 0 0 0-9.248m0 7.627a3.004 3.004 0 1 1 0-6.008a3.004 3.004 0 0 1 0 6.008"/>
+                    <circle cx="16.806" cy="7.207" r="1.078" fill="#1A383F"/>
+                    <path fill="#1A383F"
+                          d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42a4.6 4.6 0 0 0-2.633 2.632a6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71c0 2.442 0 2.753.056 3.71c.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632a6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419a4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186c.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217m-1.218 9.532a5.043 5.043 0 0 1-.311 1.688a2.987 2.987 0 0 1-1.712 1.711a4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055c-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311a2.985 2.985 0 0 1-1.719-1.711a5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654c0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311a2.991 2.991 0 0 1 1.712 1.712a5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655c0 2.436 0 2.698-.043 3.654z"/>
+                </svg>
+            </a>
+            <a href="https://fr.linkedin.com" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1M8.339 18.337H5.667v-8.59h2.672zM7.003 8.574a1.548 1.548 0 1 1 0-3.096a1.548 1.548 0 0 1 0 3.096m11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277c-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387c2.704 0 3.203 1.778 3.203 4.092v4.71z"/>
+                </svg>
+            </a>
+            <a href="https://www.youtube.com" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M21.593 7.203a2.506 2.506 0 0 0-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 0 0-1.766 1.778c-.413 1.566-.417 4.814-.417 4.814s-.004 3.264.406 4.814c.23.857.905 1.534 1.763 1.765c1.582.43 7.83.437 7.83.437s6.265.007 7.831-.403a2.515 2.515 0 0 0 1.767-1.763c.414-1.565.417-4.812.417-4.812s.02-3.265-.407-4.831M9.996 15.005l.005-6l5.207 3.005z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</footer>
+<!-- import tailwind + flowbite for tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+<!-- import AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+<script src="../script/main.js" type="module"></script>
+</body>
+</html>

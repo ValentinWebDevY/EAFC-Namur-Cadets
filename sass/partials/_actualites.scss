@@ -1,0 +1,104 @@
+#actualites-page {
+
+  h1 {
+    margin: 7rem 3rem 2rem 3rem;
+  }
+
+  .blob-actus-container {
+    position: relative;
+    margin-bottom: 4rem;
+
+    .top-left {
+      @include mX-absolute-position(0, auto, auto, 1.25rem);
+    }
+
+    .blob-red {
+      @include mX-absolute-position(0, 0, auto, auto);
+      z-index: -1;
+    }
+
+    .blob-blue {
+      @include mX-absolute-position(50%, auto, auto, auto);
+      z-index: -1;
+    }
+
+    .blob-yellow {
+      @include mX-absolute-position(auto, 0, 0, auto);
+      z-index: -1;
+    }
+
+    .bottom-left {
+      @include mX-absolute-position(auto, auto, 0, 1.25rem);
+    }
+
+    .actualites-container {
+      @include mX-flex-column-center(3rem);
+
+      padding: 3rem 0;
+
+      .card-actu {
+        margin: 0;
+        width: 22rem;
+
+        .actu-descr-container {
+          height: 50dvh;
+          overflow: auto;
+          @include mX-flex-column-center();
+
+          p {
+            padding: 0;
+          }
+        }
+
+        button {
+          background-color: $lighter_blue;
+        }
+      }
+    }
+  }
+}
+
+/* ====== RESPONSIVE TABLET ====== */
+@include mX-screen("tablet") {
+  #actualites-page {
+    .blob-actus-container {
+
+      .actualites-container {
+        margin: 0 4rem;
+
+        .card-actu {
+          width: auto;
+        }
+      }
+    }
+  }
+}
+/* ====== END RESPONSIVE TABLET ====== */
+
+/* ====== RESPONSIVE PC ====== */
+@include mX-screen("pc") {
+  #actualites-page {
+
+    .blob-actus-container {
+      .top-left {
+        @include mX-absolute-position(0, auto, auto, 3.25rem);
+      }
+
+      .bottom-left {
+        @include mX-absolute-position(auto, auto, 0, 3.25rem);
+      }
+
+      .actualites-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        @include mX-margin-settings;
+
+        .card-actu {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+/* ====== END RESPONSIVE PC ====== */

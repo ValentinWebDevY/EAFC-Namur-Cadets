@@ -1,0 +1,22 @@
+{
+  "type_enseignement" : [
+    {
+      "title" : "Enseignement supérieur",
+      "img" : "./assets/types-enseignement/superieur.jpg",
+      "descr" : "Bacheliers en 3-4 ans, Brevets d’Enseignement Supérieur, Certificat d’Aptitudes Pédagogiques, les titres de niveau supérieur disponibles sont nombreux à l’EAFC Namur Cadets ! Tous ces diplômes et certificats sont équivalents à ceux du plein exercice.",
+      "color" : "#DB424E"
+    },
+    {
+      "title" : "Enseignement secondaire",
+      "img" : "./assets/types-enseignement/secondaire.jpg",
+      "descr" : "Que ce soit dans le domaine Économique, Social, de l’Informatique, du Bien-Être, de l’Artisanat, ou dans le cadre de cours plus techniques, vous trouverez certainement chaussure à votre pied dans notre catalogue de formations.",
+      "color" : "#3A588C"
+    },
+    {
+      "title" : "Apprentissage des langues",
+      "img" : "./assets/types-enseignement/langues.jpg",
+      "descr" : "Anglais, Néerlandais, Chinois, Espagnol, Italien, de niveau élémentaire ou intermédiaire, en situation appliquée à l’enseignement supérieur et économique, nous proposons également des cours de Français pour les non-francophones.",
+      "color" : "#CEA600"
+    }
+  ]
+}

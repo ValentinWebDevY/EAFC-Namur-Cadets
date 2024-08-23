@@ -1,0 +1,76 @@
+$breakpoint-mobile: 576px;
+$breakpoint-tablet: 768px;
+$breakpoint-pc: 992px;
+$breakpoint-xl: 1200px;
+
+@mixin mX-screen ($size) {
+    @if $size == "mobile" {
+      @media screen and (min-width: $breakpoint-mobile) { @content; }
+    } @else if($size == "tablet") {
+      @media screen and (min-width: $breakpoint-tablet) { @content; }
+    } @else if($size == "pc") {
+      @media screen and (min-width: $breakpoint-pc) { @content; }
+    } @else if($size == "xl") {
+      @media screen and (min-width: $breakpoint-xl) { @content; }
+    }
+}
+
+@mixin mX-section-color ($color: $bg_main_color) {
+  background-color: $color;
+}
+
+@mixin mX-font ($size: 1rem, $weight: 400, $color: $font_color) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin mX-button ($bg-color: $lighter_blue, $color: $white, $padding, $border_rad: 15px) {
+  background-color: $bg-color;
+  color: $color;
+  padding: $padding;
+  border-radius: $border_rad;
+}
+
+@mixin mX-round-div-grid () {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: fit-content;
+  gap: 1.25rem;
+}
+
+@mixin mX-round-div ($color) {
+  background-color: $color;
+  border-radius: 50%;
+  box-shadow:  5px 5px 9px #dedede,
+  -5px -5px 9px #ffffff;
+}
+
+@mixin mX-absolute-position ($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin mX-flex-column-center ($gap: 1rem) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin mX-padding-settings () {
+  @include mX-screen("pc") {
+    padding-left: 6.25rem;
+    padding-right: 6.25rem;
+  }
+}
+
+@mixin mX-margin-settings () {
+  @include mX-screen("pc") {
+    margin-left: 6.25rem;
+    margin-right: 6.25rem;
+  }
+}

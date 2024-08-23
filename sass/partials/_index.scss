@@ -1,0 +1,698 @@
+/* ====== HEADER SECTION ====== */
+#header-section {
+  margin-top: 30%;
+  padding: 0 1.25rem 3rem 1.25rem;
+
+  .main-title {
+    position: relative;
+    padding: 0 1rem;
+
+    .top-right {
+      @include mX-absolute-position(0, 1.5rem, auto, auto);
+    }
+
+    .bottom-left {
+      @include mX-absolute-position(auto, auto, 0, 1.5rem);
+    }
+
+    // put rounded-container away from my title
+    h2 {
+      padding: 2.5rem 2.58rem;
+    }
+  }
+
+  form {
+    padding-top: 10%;
+
+    button {
+      background-color: $lighter_blue;
+    }
+  }
+}
+
+/* ====== END HEADER SECTION ====== */
+
+/* ====== ACTUALITES SECTION ====== */
+.card-actu {
+  @include mX-flex-column-center();
+
+  background-color: $white;
+  border-top: 5px solid $red;
+
+  padding: 2rem;
+  margin: 2rem 1.5rem 3rem 1.5rem;
+
+  //box-shadow: $box_shadow;
+
+  img {
+    width: 15.625rem;
+  }
+
+  .card-actu-content {
+    padding-right: 30%;
+
+    .actu-date {
+      @include mX-font(4rem, 600, $blue);
+    }
+
+    p {
+      padding: 1rem 0;
+    }
+
+    a {
+      @include mX-font($weight: 600, $color: $blue);
+    }
+  }
+}
+
+#actualites {
+  @include mX-section-color($bg_lighter_color);
+
+  .blob-container {
+    position: relative;
+    z-index: 1;
+
+    .actus-title {
+      padding: 0 1.25rem;
+
+      p {
+        color: $blue;
+      }
+    }
+
+    .actu-blue-blob {
+      @include mX-absolute-position(1rem, 0, auto, auto);
+      z-index: -1;
+    }
+
+    // adapt splidejs style
+    .splide {
+      padding: 0;
+
+      .splide__track {
+        margin-right: 1.25rem;
+      }
+    }
+
+    .actu-red-blob {
+      @include mX-absolute-position(auto, auto, 0, auto);
+      z-index: -1;
+    }
+
+    .more-actus {
+      @include mX-button($padding: .5rem 1rem, $border_rad: 5px);
+      margin: 0 1.25rem;
+    }
+  }
+}
+
+/* ====== END ACTUALITES SECTION ====== */
+
+/* ====== TYPE ENSEIGNEMENT SECTION ====== */
+#typeEnseignement {
+  margin-bottom: 2rem;
+  margin-left: 1.25rem;
+
+  h2 {
+    padding-bottom: 2.5rem;
+  }
+
+  .types-button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+
+    button {
+      width: 40%;
+    }
+
+    .sup-btn {
+      @include mX-button($white, $red, .5rem 1.5rem, 5px);
+      background: linear-gradient(145deg, #e6e6e6, #ffffff);
+      box-shadow: 9px 9px 11px #e3e3e3,
+      -9px -9px 11px #ffffff;
+    }
+
+    .sup-btn.active-btn {
+      background: $lighter_red none;
+      color: $white;
+      box-shadow: $box_shadow;
+    }
+
+    .sec-btn {
+      @extend .sup-btn;
+      @include mX-button($white, $blue, .5rem 1.5rem, 5px);
+    }
+
+    .sec-btn.active-btn {
+      background: $lighter_blue none;
+      color: $white;
+      box-shadow: $box_shadow;
+    }
+
+    .lang-btn {
+      @extend .sup-btn;
+      @include mX-button($white, $yellow, .5rem 1.5rem, 5px);
+    }
+
+    .lang-btn.active-btn {
+      background: $yellow none;
+      color: $white;
+      box-shadow: $box_shadow;
+    }
+  }
+
+  .type {
+    position: relative;
+
+    .top-right {
+      @include mX-absolute-position(auto, 1.25rem, auto, auto);
+    }
+
+    .type-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-right: 4rem;
+      margin-left: 2rem;
+
+      padding-bottom: 2rem;
+      padding-top: 3rem;
+
+    }
+
+    .logos {
+      display: flex;
+      flex-direction: column;
+
+      .letter-c {
+        background: url("assets/logo/logo-C-v2.png") center no-repeat;
+        background-size: contain;
+        width: 3.125rem;
+        height: 3.125rem;
+        rotate: -90deg;
+      }
+
+      .letter-f {
+        @extend .letter-c;
+        background: url("assets/logo/logo-F-v2.png") center no-repeat;
+        background-size: contain;
+      }
+
+      .letter-a {
+        @extend .letter-c;
+        background: url("assets/logo/logo-A-v2.png") center no-repeat;
+        background-size: contain;
+      }
+
+      .letter-e {
+        @extend .letter-c;
+        background: url("assets/logo/logo-E-v2.png") center no-repeat;
+        background-size: contain;
+      }
+    }
+
+    .img-type {
+      width: 11.563rem;
+      max-height: 14.25rem;
+      object-fit: cover;
+      border-radius: 5px;
+      box-shadow: $box_shadow;
+    }
+
+    .type-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding-right: 2rem;
+
+      a {
+        display: flex;
+        align-items: center;
+        @include mX-button($lighter_red, $white, .5rem 1rem, 5px);
+        width: fit-content;
+
+        img {
+          width: 1.875rem;
+        }
+      }
+    }
+
+    .bottom-right {
+      @include mX-absolute-position(auto, 1.25rem, -2.5rem, auto);
+    }
+  }
+}
+
+/* ====== END TYPE ENSEIGNEMENT SECTION ====== */
+
+/* ====== FORMATIONS SECTION ====== */
+#formations {
+  @include mX-section-color($bg_lighter_color);
+  margin-bottom: 2rem;
+}
+
+.formations-blob-container {
+  position: relative;
+  z-index: 1;
+
+  .formations-red-blob {
+    @include mX-absolute-position(1rem, 0, auto, auto);
+    z-index: -1;
+  }
+
+  h2 {
+    padding: 0 0 2rem 1.25rem;
+  }
+
+  // hide on mobile
+  .rounded-container {
+      display: none;
+  }
+
+  .formations-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1.5rem 3rem;
+    gap: 2rem;
+
+    .formation {
+      border: 1px solid $separation_color;
+      background-color: $bg_lighter_color;
+
+      // for each formation, the color of my border, heading4 and h4 will be the color of the right category (in my variable $category_colors)
+      @each $category, $color in $category_colors {
+        &.#{$category} {
+          border-left: 4px solid $color;
+
+          .formation-head {
+
+            .heading4 {
+              color: $color;
+            }
+          }
+
+          .formation-content {
+
+            h4 {
+              color: $color;
+            }
+          }
+        }
+      }
+
+      .formation-head {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        background-color: #DEDEDE;
+        padding: 1rem 2rem;
+
+        .heading4 {
+          color: $animaliere;
+          text-transform: uppercase;
+        }
+
+        .formation-head-infos {
+          display: flex;
+          gap: 4rem;
+
+          .formation-head-info {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+
+            svg {
+              width: 1.563rem;
+              fill: $blue;
+            }
+
+            p {
+              text-transform: uppercase;
+              color: $blue;
+            }
+          }
+        }
+      }
+
+      .formation-content {
+        padding: 2rem;
+
+        h4 {
+          color: $animaliere;
+          text-transform: uppercase;
+          padding-bottom: 1rem;
+        }
+
+        p {
+          color: $sub_text_color;
+        }
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        @include mX-button($lighter_blue, $white, .5rem 1rem, 5px);
+        width: fit-content;
+        text-transform: uppercase;
+
+        margin: 0 0 2rem 2rem;
+
+        img {
+          width: 1.875rem;
+        }
+
+      }
+    }
+  }
+
+  .all-formations-btn {
+    @include mX-button($white, $blue, .7rem 1.5rem, 5px);
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow: 9px 9px 11px #e3e3e3,
+    -9px -9px 11px #ffffff;
+    text-transform: uppercase;
+
+    margin-left: 1.25rem;
+
+    .here {
+      font-weight: bold;
+    }
+  }
+
+  .formations-yellow-blob {
+    @include mX-absolute-position(auto, 0, 0, auto);
+    z-index: -1;
+  }
+}
+
+/* ====== END FORMATIONS SECTION ====== */
+
+/* ====== RESPONSIVE TABLET ====== */
+@include mX-screen("tablet") {
+  /* header section */
+  #header-section {
+    margin-top: 20%;
+
+    form {
+      padding-top: 3rem;
+    }
+  }
+
+  /* end header section */
+
+  /* actus section */
+
+  .card-actu {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    .card-actu-content {
+      padding-right: 10%;
+    }
+  }
+
+  #actualites {
+    .actu-yellow-blob {
+      display: block;
+      @include mX-absolute-position(auto, 0, 0, auto);
+      z-index: -1;
+    }
+  }
+  /* end actus section */
+
+  /* types enseignement section */
+  #typeEnseignement {
+
+    margin-left: 3rem;
+    padding-right: 3rem;
+
+    .types-button {
+      flex-wrap: nowrap;
+
+      button {
+        width: fit-content;
+      }
+
+      .sup-btn {
+        padding: .5rem 2.5rem;
+      }
+    }
+
+    .type {
+      margin-top: 3rem;
+
+      .top-right {
+        @include mX-absolute-position(0, 0, auto, auto);
+      }
+
+      .type-head {
+        justify-content: space-around;
+      }
+
+      .logos {
+
+        .letter-c {
+          width: 4rem;
+          height: 4rem;
+        }
+      }
+
+      .img-type {
+        width: 15rem;
+        max-height: 19rem;
+      }
+
+      .bottom-right {
+        @include mX-absolute-position(auto, 0, -2.5rem, auto);
+      }
+    }
+  }
+  /* end types enseignement section */
+
+  /* formations - section */
+
+  .formations-blob-container {
+
+    h2 {
+      padding-left: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .rounded-container {
+      display: grid;
+    }
+
+    .top-left {
+      @include mX-absolute-position(4rem, auto, auto, 1.25rem)
+    }
+
+    .bottom-left {
+      @include mX-absolute-position(auto, auto, 3rem, 1.25rem)
+    }
+
+    .formations-container {
+      margin-left: 4rem;
+      margin-right: 4rem;
+    }
+
+    .center-formations-btn {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  /* end formations - section */
+}
+
+/* ====== END RESPONSIVE TABLET ====== */
+
+/* ====== RESPONSIVE PC ====== */
+@include mX-screen("pc") {
+
+  /* header section */
+  #header-section {
+    margin-top: 10%;
+
+    .main-title {
+      .top-right {
+        @include mX-absolute-position(0, 8rem, auto, auto);
+      }
+
+      .bottom-left {
+        @include mX-absolute-position(auto, auto, 0, 8rem);
+      }
+
+      h2 {
+        padding-left: 15%;
+        padding-right: 15%;
+      }
+    }
+  }
+
+  /* end header section */
+
+  /* actus section */
+  #actualites {
+    .blob-container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-areas:
+      "title splide"
+      "btn splide";
+
+      @include mX-padding-settings;
+
+      .actu-blue-blob {
+        @include mX-absolute-position(-1rem, 4rem, auto, auto);
+        z-index: -1;
+      }
+
+      .actu-red-blob {
+        @include mX-absolute-position(auto, auto, 0, 30%);
+        z-index: -1;
+      }
+
+      .actu-yellow-blob {
+        display: block;
+        @include mX-absolute-position(auto, 0, 0, auto);
+        z-index: -1;
+      }
+
+      .actus-title {
+        grid-area: title;
+        align-self: end;
+        padding-bottom: 1rem;
+      }
+
+      .splide {
+        grid-area: splide;
+      }
+
+      .more-actus {
+        grid-area: btn;
+        height: fit-content;
+        width: fit-content;
+      }
+    }
+  }
+  /* end actus section */
+
+
+  /* types section */
+  #typeEnseignement {
+    h2 {
+      text-align: center;
+    }
+
+    .types-button {
+      gap: 4rem;
+
+      .sup-btn {
+        width: 17rem;
+        font-size: 1.125rem;
+      }
+    }
+
+    .type {
+      display: grid;
+      grid-template-columns: 50% 40%;
+      margin-top: 7rem;
+
+      .top-right {
+        @include mX-absolute-position(-3rem, 4rem, auto, auto);
+      }
+
+      .bottom-right {
+        @include mX-absolute-position(auto, 4rem, 0, auto);
+      }
+
+      .type-head {
+        justify-content: normal;
+        gap: 5rem;
+        width: fit-content;
+        justify-self: end;
+
+        padding-top: 0;
+
+
+        .logos {
+
+          .letter-c {
+            width: 5rem;
+            height: 5rem;
+          }
+        }
+
+        .img-type {
+          width: 17rem;
+          max-height: 21rem;
+        }
+      }
+
+      .type-content {
+      }
+    }
+  }
+  /* end types section */
+
+  /* formations section */
+  #formations {
+    .formations-blob-container {
+      h2 {
+        text-align: center;
+        padding-left: 0;
+      }
+
+      .formations-red-blob {
+        @include mX-absolute-position(1rem, 2rem, auto, auto);
+      }
+
+      .formations-yellow-blob {
+        @include mX-absolute-position(auto, 2rem, 0, auto);
+      }
+
+      .top-left {
+        @include mX-absolute-position(4rem, auto, auto, 6.25rem)
+      }
+
+      .bottom-left {
+        @include mX-absolute-position(auto, auto, 3rem, 6.25rem)
+      }
+
+      .formations-container {
+        margin-left: 10rem;
+        margin-right: 10rem;
+
+        .formation {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-areas:
+          "head head"
+          "content btn";
+
+          .formation-head {
+            flex-direction: row;
+            justify-content: space-between;
+            grid-area: head;
+          }
+
+          .formation-content {
+            grid-area: content;
+          }
+
+          .formation-btn {
+            grid-area: btn;
+            justify-self: end;
+            align-self: center;
+            height: fit-content;
+            margin: 0 2rem 0 0;
+          }
+        }
+      }
+    }
+  }
+  /* end formations section */
+}
+/* ====== END RESPONSIVE PC ====== */

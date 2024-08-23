@@ -1,0 +1,32 @@
+$font_color: #1A383F;
+$sub_text_color: #ABACAC;
+$white: white;
+
+$red: #D61726;
+$lighter_red: #DB424E;
+$yellow: #CEA600;
+$blue: #0D3273;
+$lighter_blue: #3A588C;
+
+$bg_main_color: #F2F2F2;
+$bg_lighter_color: #F6F6F6;
+
+$separation_color: #DEDEDE;
+
+$box_shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.25);
+
+// type formation colors
+$animaliere: #E67E22;
+$enseignement_superieur: #E50076;
+$technique_artisanat: #795548;
+
+$category_colors: (
+        'cat-animaliere': #E67E22,
+        'cat-superieur': #E50076,
+        'cat-technique': #795548,
+        'cat-admin' : #1ABC9C,
+        'cat-aide' : #3498DB,
+        'cat-bien-etre' : #9CCC65,
+        'cat-langue' : #89418A,
+        'cat-paramedical' : #78909C
+);

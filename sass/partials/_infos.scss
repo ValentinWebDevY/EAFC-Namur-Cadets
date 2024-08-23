@@ -1,0 +1,305 @@
+#infos-pages {
+  h1 {
+    margin: 7rem 3rem 2rem 3rem;
+  }
+
+  .infos-blob-container {
+    position: relative;
+
+    .top-left {
+      @include mX-absolute-position(0, auto, auto, auto);
+    }
+
+    .blob-red {
+      @include mX-absolute-position(0, 0, auto, auto);
+      z-index: -1;
+    }
+
+    #accordion-flush {
+      margin: 0 1.25rem 2rem;
+      padding: 1rem 0;
+
+      h2 {
+        padding: 0 1.25rem;
+      }
+
+      img {
+        width: 15.625rem;
+      }
+
+      .accordion-content {
+        padding: 1.25rem;
+
+        .infos-list-items {
+          padding-top: .5rem;
+          padding-left: .5rem;
+        }
+
+        .exoneration-content {
+          @include mX-flex-column-center();
+        }
+
+        .modalite-inscr-container {
+          @include mX-flex-column-center();
+        }
+
+        .modalite-pre-inscr-container {
+          @include mX-flex-column-center();
+
+          .content {
+
+            .txt {
+              p{
+                padding-bottom: .5rem;
+              }
+            }
+
+            a {
+              display: flex;
+              align-items: center;
+              gap: .5rem;
+
+              @include mX-button(transparent, $blue, .5rem 1rem, 5px);
+              border: 2px solid $blue;
+
+              width: fit-content;
+              margin-top: .5rem;
+
+              svg {
+                fill: $blue;
+              }
+            }
+          }
+        }
+
+        .doc-supp-container {
+          display: flex;
+          flex-direction: column;
+          gap: .5rem;
+
+          li {
+            padding: .5rem 0;
+            display: flex;
+
+            a {
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+              color: $font_color;
+              border-bottom: 1px solid $font_color;
+              width: fit-content;
+            }
+          }
+
+          img {
+            align-self: center;
+          }
+        }
+
+        .infos-ue-container {
+          @include mX-flex-column-center();
+
+          p {
+            padding-bottom: .5rem;
+          }
+        }
+
+        .infos-eghezee-container {
+          @include mX-flex-column-center();
+        }
+      }
+
+      .accordion-content-container {
+        @include mX-flex-column-center();
+
+        .first-part {
+
+          h3 {
+            padding-bottom: .5rem;
+            padding-top: 1rem;
+          }
+        }
+      }
+
+      .infos-calendar-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        p {
+          color: $blue;
+        }
+
+        h3 {
+          color: $font_color;
+        }
+
+        img {
+          align-self: center;
+        }
+      }
+    }
+
+    .blob-yellow {
+      @include mX-absolute-position(auto, 0, 0, auto);
+      z-index: -1;
+    }
+  }
+}
+
+/* ====== RESPONSIVE TABLET ====== */
+@include mX-screen("tablet") {
+  #infos-pages {
+
+    .infos-blob-container {
+      .top-left {
+        @include mX-absolute-position(0, auto, auto, 1.25rem);
+      }
+
+      #accordion-flush {
+        margin-left: 3rem;
+        margin-right: 3rem;
+      }
+    }
+  }
+}
+/* ====== END RESPONSIVE TABLET ====== */
+
+
+/* ====== RESPONSIVE PC ====== */
+@include mX-screen("pc") {
+  #infos-pages {
+
+    .infos-blob-container {
+
+      .top-left {
+        @include mX-absolute-position(0, auto, auto, 4.5rem);
+      }
+
+      #accordion-flush {
+        @include mX-margin-settings;
+
+        img {
+          min-width: 18.75rem;
+        }
+
+        .conditions-container {
+          flex-direction: row;
+        }
+
+        .inscr-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-areas:
+          "img first"
+          "last last";
+
+          img {
+            grid-area: img;
+          }
+
+          .first-part {
+            grid-area: first;
+          }
+
+          .last-part {
+            grid-area: last;
+          }
+        }
+
+        .accordion-content {
+
+          .exoneration-content {
+            flex-direction: row;
+          }
+
+          .modalite-inscr-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+            "first second"
+            "last img";
+            align-items: flex-start;
+
+            img {
+              grid-area: img;
+              justify-self: center;
+            }
+
+            .modalite-inscr-first-part {
+              grid-area: first;
+            }
+
+            .modalite-inscr-second-part {
+              grid-area: second;
+            }
+
+            .modalite-inscr-last-part {
+              grid-area: last;
+            }
+          }
+
+          .modalite-pre-inscr-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+
+            a {
+              &:hover {
+                background-color: $blue;
+                color: $white;
+                transition: .5s;
+
+                svg {
+                  fill: $white;
+                }
+              }
+            }
+          }
+
+          .doc-supp-container {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+
+            li {
+
+              a {
+                border-bottom: none;
+
+                &:hover {
+                  color: $blue;
+
+                  svg {
+                    path {
+                      fill: $blue;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .infos-ue-container {
+            flex-direction: row-reverse;
+            gap: 1rem;
+          }
+
+          .infos-eghezee-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            align-items: flex-start;
+
+            img {
+              min-width: 15.625rem;
+            }
+          }
+
+          .infos-calendar-container {
+            flex-direction: row-reverse;
+            justify-content: space-around;
+          }
+        }
+      }
+    }
+  }
+}
+/* ====== END RESPONSIVE PC ====== */

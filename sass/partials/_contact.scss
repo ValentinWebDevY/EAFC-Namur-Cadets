@@ -1,0 +1,255 @@
+#contact-page {
+  h1 {
+    margin: 7rem 3rem 2rem 3rem;
+  }
+
+  .contact-blob-container {
+    position: relative;
+
+    .rounded-container {
+      display: none;
+    }
+
+    .blob-red {
+      @include mX-absolute-position(15%, 0, auto, auto);
+      z-index: 10;
+    }
+
+    .infos-inscriptions {
+      position: relative;
+
+      padding: 1rem 1.25rem 2rem 1.25rem;
+      background-color: $bg_lighter_color;
+      border-top: 1px solid $separation_color;
+      border-bottom: 1px solid $separation_color;
+
+      h2 {
+        padding-bottom: 2rem;
+        padding-top: 2.5rem;
+      }
+    }
+
+    .person {
+      display: flex;
+      gap: 2rem;
+      width: 100%;
+      z-index: 11;
+
+      img {
+        border-radius: 37% 63% 58% 42% / 68% 24% 76% 32% ;
+        width: 4.688rem;
+        height: 4.688rem;
+        object-fit: cover;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+
+        .heading4 {
+          text-transform: uppercase;
+          color: $blue;
+        }
+
+        .contact-link {
+          display: flex;
+          gap: 1rem;
+        }
+      }
+    }
+
+    .direction {
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+
+      h2 {
+        padding-bottom: 2rem;
+        padding-top: 1rem;
+      }
+      .persons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+      }
+    }
+
+    .blob-yellow {
+      @include  mX-absolute-position(auto, 0, 25%, auto);
+      z-index: 10;
+    }
+
+    .infos-technique {
+      @extend .infos-inscriptions;
+
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+    }
+  }
+
+  #map {
+    h2 {
+      padding-left: 1.25rem;
+      padding-bottom: 1rem;
+    }
+
+    .map-section-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .sub-info {
+        display: flex;
+        gap: 1rem;
+        padding-left: 1.25rem;
+
+        .pin {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          background-color: $bg_lighter_color;
+          border: 1px solid $separation_color;
+          width: 5rem;
+          height: 5rem;
+        }
+
+        .content {
+
+          p {
+            @include  mX-font($weight: 600, $color: $blue);
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      iframe {
+        align-self: center;
+        border: 1px solid $separation_color;
+        width: 23rem;
+        height: 23rem;
+      }
+    }
+  }
+}
+
+/* ====== RESPONSIVE TABLET ====== */
+@include mX-screen("tablet") {
+  #contact-page {
+    .contact-blob-container {
+      .rounded-container {
+        display: grid;
+      }
+
+      .top-left {
+        @include mX-absolute-position(auto, auto, auto, 1.25rem);
+      }
+
+      .bottom-left {
+        @include mX-absolute-position(auto, auto, 1rem, 1.25rem);
+      }
+
+      .infos-inscriptions {
+        padding-left: 4rem;
+        padding-right: 4rem;
+      }
+
+      .direction {
+        padding-left: 4rem;
+        padding-right: 4rem;
+
+        .persons {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          row-gap: 2rem;
+        }
+      }
+
+      .infos-technique {
+        padding-bottom: 3rem;
+      }
+    }
+
+    #map {
+      h2 {
+        padding-left: 3rem;
+        padding-bottom: 3rem;
+      }
+      .map-section-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "adresse heures"
+        "map map";
+
+        margin: 0 3rem;
+
+        .sub-info {
+          grid-area: adresse;
+          padding: 0;
+        }
+
+        .sub-info:nth-child(2) {
+          grid-area: heures;
+        }
+
+        iframe {
+          grid-area: map;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+/* ====== END RESPONSIVE TABLET ====== */
+
+
+/* ====== RESPONSIVE PC ====== */
+@include mX-screen("pc") {
+  #contact-page {
+
+    .contact-blob-container {
+
+      .top-left {
+        @include mX-absolute-position(auto, auto, auto, 3.25rem);
+      }
+
+      .bottom-left {
+        @include mX-absolute-position(auto, auto, 1rem, 3.25rem);
+      }
+
+      .infos-inscriptions, .direction {
+        @include mX-padding-settings;
+      }
+    }
+
+    #map {
+      margin-bottom: 2rem;
+
+      h2 {
+        padding-left: 6.25rem;
+      }
+
+      .map-section-content {
+        @include mX-margin-settings;
+
+        .sub-info {
+          font-size: 1.125rem;
+
+          .pin {
+            width: 7rem;
+            height: 7rem;
+
+            svg {
+              width: 2rem;
+              height: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* ====== END RESPONSIVE PC ====== */
